@@ -1,0 +1,39 @@
+[build-system]
+requires = ["setuptools", "setuptools-scm"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mdiffj"
+description = "Basic diffusion implementations"
+readme = "README.md"
+requires-python = ">=3.8"
+dependencies = [
+    "tyro",
+    "jax",
+    "jaxlib",
+    "jaxtyping",
+    "flax",
+]
+dynamic = ["version"]
+
+[tool.isort]
+profile = "black"
+
+[tool.mypy]
+python_version = "3.8"
+ignore_missing_imports = true
+warn_unused_configs = true
+
+[tool.pyright]
+include = ["mdiffj"]
+exclude = [
+    "**/__pycache__",
+]
+defineConstant = { DEBUG = true }
+
+reportMissingImports = true
+reportMissingTypeStubs = false
+reportPrivateImportUsage = false
+
+pythonVersion = "3.8"
+pythonPlatform = "Linux"
