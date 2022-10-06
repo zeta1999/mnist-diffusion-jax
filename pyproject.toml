@@ -13,6 +13,7 @@ dependencies = [
     "jaxlib",
     "jaxtyping",
     "flax",
+    "fifteen @ git+ssh://git@github.com/brentyi/fifteen",
 ]
 dynamic = ["version"]
 
